@@ -429,7 +429,7 @@ h3 {
 .volunteers-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.9rem;
+  gap: 2rem;
 }
 
 .mini-volunteer {
@@ -588,6 +588,37 @@ h3 {
   transform: translateY(0);
 }
 
+@media (max-width: 699px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    aspect-ratio: 3 / 4;
+    gap: 2rem;
+  }
+
+  .tribute-card {
+    grid-template-columns: 1fr;
+    padding: 1.3rem;
+  }
+
+  .tribute-card--right {
+    grid-template-columns: 1fr;
+  }
+
+  .card-figure {
+    min-height: 320px;
+  }
+
+  .volunteers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+}
+
 @media (min-width: 700px) {
   .hero-grid {
     grid-template-columns: 1.1fr 0.9fr;
@@ -609,6 +640,7 @@ h3 {
 
   .volunteers-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
   }
 
   .impact-grid {
